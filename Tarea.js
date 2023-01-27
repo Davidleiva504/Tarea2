@@ -50,7 +50,7 @@ http.createServer(function (req, res) {
                     "N_autor = ?"+
                     " where id_libro = ? ";
 
-                //mandamos parametros para el update
+                
                 parametros = [datos.nombre_libro,
                     datos.genero_literario,
                     datos.F_lanzamineto,
@@ -62,7 +62,6 @@ http.createServer(function (req, res) {
             case "delete":
                 sql = "delete from T_registro_libros  where id_libro =? ";
 
-                //mandamos parametros para el delete
                 parametros = [datos.id_libro];
                 break;
 
@@ -97,7 +96,7 @@ http.createServer(function (req, res) {
                     " apellido = ? " +
                     " where numero_cuenta = ? ";
 
-                //mandamos parametros para el update
+             
                 parametros = [datos.numero_cuenta,
                     datos.nombre,
                     datos.apelido,
@@ -108,7 +107,7 @@ http.createServer(function (req, res) {
             case "delete":
                 sql = "delete from tbl_alumno  where N_cuenta =? ";
 
-                //mandamos parametros para el delete
+
                 parametros = [datos.N_cuenta];
                 break;
 
@@ -139,7 +138,7 @@ http.createServer(function (req, res) {
                 " set F_prestamo =? " +
                 " where id_prestamo =? ";
 
-                //mandamos parametros para el update
+                
                 parametros = [datos.fecha_prestamo,
                     datos.id_libro
                 ];
@@ -148,7 +147,7 @@ http.createServer(function (req, res) {
             case "delete":
                 sql = "delete from T_prestamos  where id_prestamo =? ";
                 
-                //mandamos parametros para el delete
+                
                 parametros = [datos.id_prestamo];
                 break;
                 
