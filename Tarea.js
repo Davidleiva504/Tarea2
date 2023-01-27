@@ -29,7 +29,7 @@ http.createServer(function (req, res) {
             case "insert":
                 sql = "insert into tbl_registro_libros " +
                     "(N_libro, genero_literario, F_lanzamineto, N_autor )" +
-                    "values (?,?,?,?)";
+                    "values (?,?,?)";
                 parametros = [datos.nombre_libro,
                     datos.genero_literario,
                     datos.F_lanzamineto,
@@ -61,7 +61,7 @@ http.createServer(function (req, res) {
 
             case "delete":
                 sql = "delete from T_registro_libros  where id_libro =? ";
-
+    
                 parametros = [datos.id_libro];
                 break;
 
